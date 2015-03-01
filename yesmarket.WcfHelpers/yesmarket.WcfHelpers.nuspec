@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>yesmarket.WcfHelpers</id>
+    <version>1.0.0</version>
+    <authors>Ryan Bartsch</authors>
+    <owners>yesmarket</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WCF helpers such as generic fault contracts.</description>
+  </metadata>
+</package>
