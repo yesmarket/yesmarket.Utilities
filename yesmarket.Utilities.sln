@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.AutoMapping", "ye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.WcfHelpers", "yesmarket.WcfHelpers\yesmarket.WcfHelpers.csproj", "{FBC5935F-B7A2-41BC-9E45-202B888B55BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.NHibernate", "yesmarket.NHibernate\yesmarket.NHibernate.csproj", "{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
