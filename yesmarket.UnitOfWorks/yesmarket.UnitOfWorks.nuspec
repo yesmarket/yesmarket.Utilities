@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>yesmarket.UnitOfWorks</id>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <authors>Ryan Bartsch</authors>
     <owners>yesmarket</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
