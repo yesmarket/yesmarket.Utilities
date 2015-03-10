@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.WCF", "yesmarket.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Messaging", "yesmarket.Messaging\yesmarket.Messaging.csproj", "{54A85592-FD58-4188-8773-C426B84DA76D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.FluentNHibernate.AutoMapping", "yesmarket.FluentNHibernate.AutoMapping\yesmarket.FluentNHibernate.AutoMapping.csproj", "{C6E3E880-92F0-4821-AA34-8B16488D06F0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,10 +51,6 @@ Global
 		{54A85592-FD58-4188-8773-C426B84DA76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54A85592-FD58-4188-8773-C426B84DA76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54A85592-FD58-4188-8773-C426B84DA76D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
