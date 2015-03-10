@@ -7,8 +7,8 @@
     <ProjectGuid>{FBC5935F-B7A2-41BC-9E45-202B888B55BE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>yesmarket.WcfHelpers</RootNamespace>
-    <AssemblyName>yesmarket.WcfHelpers</AssemblyName>
+    <RootNamespace>yesmarket.WCF</RootNamespace>
+    <AssemblyName>yesmarket.WCF</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -2,7 +2,7 @@ using System;
 using System.Linq.Expressions;
 using SimpleInjector;
 
-namespace yesmarket.SimpleInjectorExtensions
+namespace yesmarket.SimpleInjector
 {
     public static class ContextDependentExtensions
     {

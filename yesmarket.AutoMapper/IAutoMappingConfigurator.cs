@@ -1,4 +1,4 @@
-﻿namespace yesmarket.AutoMapping
+﻿namespace yesmarket.AutoMapper
 {
     public interface IAutoMappingConfigurator
     {

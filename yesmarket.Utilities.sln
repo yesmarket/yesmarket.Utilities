@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.NHibernate", "yesmarket.NHibernate\yesmarket.NHibernate.csproj", "{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.UnitOfWork", "yesmarket.UnitOfWork\yesmarket.UnitOfWork.csproj", "{351FBD43-01B2-4649-AF91-B786646E4B78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.SimpleInjector", "yesmarket.SimpleInjector\yesmarket.SimpleInjector.csproj", "{856D10E9-7B90-49A0-9CF1-C48B9B3CEDB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.AutoMapper", "yesmarket.AutoMapper\yesmarket.AutoMapper.csproj", "{E42C7F48-ADF2-47F6-8B5D-5D886F342D23}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.DateTimes", "yesmarket.DateTimes\yesmarket.DateTimes.csproj", "{9D632A63-48F4-49DE-B967-736DFE66E498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.UnitOfWorks", "yesmarket.UnitOfWorks\yesmarket.UnitOfWorks.csproj", "{351FBD43-01B2-4649-AF91-B786646E4B78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.WCF", "yesmarket.WCF\yesmarket.WCF.csproj", "{FBC5935F-B7A2-41BC-9E45-202B888B55BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.SimpleInjectorExtensions", "yesmarket.SimpleInjectorExtensions\yesmarket.SimpleInjectorExtensions.csproj", "{856D10E9-7B90-49A0-9CF1-C48B9B3CEDB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Messaging", "yesmarket.Messaging\yesmarket.Messaging.csproj", "{54A85592-FD58-4188-8773-C426B84DA76D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.AutoMapping", "yesmarket.AutoMapping\yesmarket.AutoMapping.csproj", "{E42C7F48-ADF2-47F6-8B5D-5D886F342D23}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.WcfHelpers", "yesmarket.WcfHelpers\yesmarket.WcfHelpers.csproj", "{FBC5935F-B7A2-41BC-9E45-202B888B55BE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.NHibernate", "yesmarket.NHibernate\yesmarket.NHibernate.csproj", "{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.FluentNHibernate.AutoMapping", "yesmarket.FluentNHibernate.AutoMapping\yesmarket.FluentNHibernate.AutoMapping.csproj", "{C6E3E880-92F0-4821-AA34-8B16488D06F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +25,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9D632A63-48F4-49DE-B967-736DFE66E498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D632A63-48F4-49DE-B967-736DFE66E498}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D632A63-48F4-49DE-B967-736DFE66E498}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D632A63-48F4-49DE-B967-736DFE66E498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{351FBD43-01B2-4649-AF91-B786646E4B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{351FBD43-01B2-4649-AF91-B786646E4B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{351FBD43-01B2-4649-AF91-B786646E4B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,14 +41,22 @@ Global
 		{E42C7F48-ADF2-47F6-8B5D-5D886F342D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E42C7F48-ADF2-47F6-8B5D-5D886F342D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E42C7F48-ADF2-47F6-8B5D-5D886F342D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D632A63-48F4-49DE-B967-736DFE66E498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D632A63-48F4-49DE-B967-736DFE66E498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D632A63-48F4-49DE-B967-736DFE66E498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D632A63-48F4-49DE-B967-736DFE66E498}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A85592-FD58-4188-8773-C426B84DA76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A85592-FD58-4188-8773-C426B84DA76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A85592-FD58-4188-8773-C426B84DA76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A85592-FD58-4188-8773-C426B84DA76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E3E880-92F0-4821-AA34-8B16488D06F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

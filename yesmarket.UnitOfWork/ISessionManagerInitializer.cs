@@ -1,4 +1,4 @@
-namespace yesmarket.UnitOfWorks
+namespace yesmarket.UnitOfWork
 {
     public interface ISessionManagerInitializer
     {

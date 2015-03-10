@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace yesmarket.SimpleInjectorExtensions
+namespace yesmarket.SimpleInjector
 {
     public interface IInvocation
     {

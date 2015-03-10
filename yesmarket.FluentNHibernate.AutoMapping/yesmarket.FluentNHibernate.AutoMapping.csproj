@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{856D10E9-7B90-49A0-9CF1-C48B9B3CEDB2}</ProjectGuid>
+    <ProjectGuid>{C6E3E880-92F0-4821-AA34-8B16488D06F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>yesmarket.SimpleInjectorExtensions</RootNamespace>
-    <AssemblyName>yesmarket.SimpleInjectorExtensions</AssemblyName>
+    <RootNamespace>yesmarket.FluentNHibernate.AutoMapping</RootNamespace>
+    <AssemblyName>yesmarket.FluentNHibernate.AutoMapping</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,12 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SimpleInjector">
-      <HintPath>..\packages\SimpleInjector.2.7.2\lib\net45\SimpleInjector.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleInjector.Diagnostics">
-      <HintPath>..\packages\SimpleInjector.2.7.2\lib\net45\SimpleInjector.Diagnostics.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,16 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextDependentExtensions.cs" />
-    <Compile Include="DependencyContext.cs" />
-    <Compile Include="Extensions.Interceptor.cs" />
-    <Compile Include="IInterceptor.cs" />
-    <Compile Include="IInvocation.cs" />
-    <Compile Include="Interceptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

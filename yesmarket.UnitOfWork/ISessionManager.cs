@@ -1,6 +1,6 @@
 using NHibernate;
 
-namespace yesmarket.UnitOfWorks
+namespace yesmarket.UnitOfWork
 {
     public interface ISessionManager
     {

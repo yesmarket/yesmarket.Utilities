@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace yesmarket.SimpleInjectorExtensions
+namespace yesmarket.SimpleInjector
 {
     [DebuggerDisplay("DependencyContext (ServiceType: {ServiceType}, ImplementationType: {ImplementationType})")]
     public class DependencyContext

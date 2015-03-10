@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace yesmarket.WcfHelpers.FaultContracts
+namespace yesmarket.WCF.FaultContracts
 {
     [DataContract]
     public class ValidationFault : Fault

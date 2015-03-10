@@ -1,9 +1,9 @@
 using System;
 using NHibernate;
 
-namespace yesmarket.UnitOfWorks
+namespace yesmarket.UnitOfWork
 {
-    public interface ISimpleUnitOfWork
+    public interface IUnitOfWork
     {
         void Do(Action<ISession> action);
     }

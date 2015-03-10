@@ -1,4 +1,4 @@
-﻿namespace yesmarket.SimpleInjectorExtensions
+﻿namespace yesmarket.SimpleInjector
 {
     public interface IInterceptor
     {

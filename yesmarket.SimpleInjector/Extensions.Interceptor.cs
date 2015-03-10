@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using SimpleInjector;
 
-namespace yesmarket.SimpleInjectorExtensions
+namespace yesmarket.SimpleInjector
 {
     // Extension methods for interceptor registration
     // NOTE: These extension methods can only intercept interfaces, not abstract types.
