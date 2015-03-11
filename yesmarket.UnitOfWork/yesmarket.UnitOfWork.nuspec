@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>yesmarket.UnitOfWorks</id>
-    <version>1.0.2</version>
+    <id>yesmarket.UnitOfWork</id>
+    <version>1.0.4</version>
     <authors>Ryan Bartsch</authors>
     <owners>yesmarket</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>yesmarket.WcfHelpers</id>
-    <version>1.0.1</version>
+    <id>yesmarket.Wcf</id>
+    <version>1.0.2</version>
     <authors>Ryan Bartsch</authors>
     <owners>yesmarket</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

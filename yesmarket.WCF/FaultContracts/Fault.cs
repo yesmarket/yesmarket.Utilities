@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace yesmarket.WCF.FaultContracts
+namespace yesmarket.Wcf.FaultContracts
 {
     [DataContract]
     public class Fault

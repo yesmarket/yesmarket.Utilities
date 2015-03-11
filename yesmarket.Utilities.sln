@@ -13,9 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.AutoMapper", "yes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.DateTimes", "yesmarket.DateTimes\yesmarket.DateTimes.csproj", "{9D632A63-48F4-49DE-B967-736DFE66E498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.WCF", "yesmarket.WCF\yesmarket.WCF.csproj", "{FBC5935F-B7A2-41BC-9E45-202B888B55BE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Messaging", "yesmarket.Messaging\yesmarket.Messaging.csproj", "{54A85592-FD58-4188-8773-C426B84DA76D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Messaging.Msmq", "yesmarket.Messaging.Msmq\yesmarket.Messaging.Msmq.csproj", "{6EF66A19-B17F-4505-AF6F-23C7E33FAE98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Wcf", "yesmarket.Wcf\yesmarket.Wcf.csproj", "{FBC5935F-B7A2-41BC-9E45-202B888B55BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +45,18 @@ Global
 		{9D632A63-48F4-49DE-B967-736DFE66E498}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D632A63-48F4-49DE-B967-736DFE66E498}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D632A63-48F4-49DE-B967-736DFE66E498}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54A85592-FD58-4188-8773-C426B84DA76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{54A85592-FD58-4188-8773-C426B84DA76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54A85592-FD58-4188-8773-C426B84DA76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54A85592-FD58-4188-8773-C426B84DA76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EF66A19-B17F-4505-AF6F-23C7E33FAE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF66A19-B17F-4505-AF6F-23C7E33FAE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF66A19-B17F-4505-AF6F-23C7E33FAE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF66A19-B17F-4505-AF6F-23C7E33FAE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

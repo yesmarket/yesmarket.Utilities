@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>yesmarket.SimpleInjectorExtensions</id>
+    <id>yesmarket.SimpleInjector</id>
     <version>1.0.0</version>
     <authors>Ryan Bartsch</authors>
     <owners>yesmarket</owners>

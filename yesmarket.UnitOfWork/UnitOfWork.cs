@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.Remoting.Messaging;
 using NHibernate;
 using NLog.Interface;
 
@@ -7,10 +6,10 @@ namespace yesmarket.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        const string Key = "yesmarket.UnitOfWork";
+        [ThreadStatic] private static ISession _currentSession;
 
-        private readonly ISessionManager _sessionManager;
         private readonly ILogger _logger;
+        private readonly ISessionManager _sessionManager;
 
         public UnitOfWork(
             ISessionManager sessionManager,
@@ -22,32 +21,37 @@ namespace yesmarket.UnitOfWork
 
         public void Do(Action<ISession> action)
         {
-            var contextSession = CallContext.GetData(Key) as ISession;
-
-            if (contextSession == null)
+            if (_currentSession != null && _currentSession.IsConnected && _currentSession.IsOpen)
             {
-                using (var session = _sessionManager.SessionFactory.OpenSession())
-                {
-                    using (var transaction = session.BeginTransaction())
-                    {
-                        try
-                        {
-                            CallContext.SetData(Key, session);
-                            action.Invoke(session);
-                            transaction.Commit();
-                        }
-                        catch (Exception)
-                        {
-                            transaction.Rollback();
-                            _logger.Error("Rolling back transaction.");
-                            throw;
-                        }
-                    }
-                }
+                action.Invoke(_currentSession);
             }
             else
             {
-                action.Invoke(contextSession);
+                try
+                {
+                    using (var session = _sessionManager.SessionFactory.OpenSession())
+                    {
+                        using (var transaction = session.BeginTransaction())
+                        {
+                            try
+                            {
+                                _currentSession = session;
+                                action.Invoke(session);
+                                transaction.Commit();
+                            }
+                            catch (Exception)
+                            {
+                                transaction.Rollback();
+                                _logger.Error("Rolling back transaction.");
+                                throw;
+                            }
+                        }
+                    }
+                }
+                finally
+                {
+                    _currentSession = null;
+                }
             }
         }
     }
