@@ -1,4 +1,4 @@
-﻿namespace yesmarket.AutoMapper
+﻿namespace yesmarket.Mapping
 {
     public interface IMapper<in TSource, out TDestination>
     {

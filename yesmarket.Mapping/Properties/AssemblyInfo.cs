@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("yesmarket.AutoMapping")]
+[assembly: AssemblyTitle("yesmarket.Mapping")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("yesmarket.AutoMapping")]
+[assembly: AssemblyProduct("yesmarket.Mapping")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("60410e5e-9be5-4b29-9643-1dc8e82c593e")]
+[assembly: Guid("e1a6f369-a00f-4f24-b88d-959dfa6a1773")]
 
 // Version information for an assembly consists of the following four values:
 //
