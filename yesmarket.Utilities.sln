@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.DateTimes", "yesm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Wcf", "yesmarket.Wcf\yesmarket.Wcf.csproj", "{FBC5935F-B7A2-41BC-9E45-202B888B55BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Identity", "yesmarket.Identity\yesmarket.Identity.csproj", "{7B80D9EB-7375-424D-9B01-1424257758C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC5935F-B7A2-41BC-9E45-202B888B55BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B80D9EB-7375-424D-9B01-1424257758C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B80D9EB-7375-424D-9B01-1424257758C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B80D9EB-7375-424D-9B01-1424257758C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B80D9EB-7375-424D-9B01-1424257758C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
