@@ -6,7 +6,7 @@ namespace yesmarket.Wcf.FaultContracts
     [DataContract]
     public class ValidationFault : Fault
     {
-        public ValidationFault(string message, List<string> errors)
+        public ValidationFault(string message, IList<string> errors)
             : base(message)
         {
             Errors = errors;
