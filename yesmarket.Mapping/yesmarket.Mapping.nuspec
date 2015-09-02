@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>yesmarket.Mapping</id>
+    <version>1.0.0</version>
+    <authors>Ryan Bartsch</authors>
+    <owners>Yesmarket</owners>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
+    <projectUrl>https://github.com/yesmarket/yesmarket.Utilities</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common interfaces for mapping between objects.</description>
+  </metadata>
+</package>
