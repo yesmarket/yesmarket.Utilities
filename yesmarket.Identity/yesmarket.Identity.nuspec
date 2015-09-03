@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>yesmarket.Identity</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Ryan Bartsch</authors>
     <owners>Yesmarket</owners>
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
