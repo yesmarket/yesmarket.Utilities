@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\Exception.Extensions.cs" />
     <Compile Include="FaultContracts\Fault.cs" />
     <Compile Include="FaultContracts\ValidationFault.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
