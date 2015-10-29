@@ -1,6 +1,6 @@
 using System;
 
-namespace PoC
+namespace yesmarket.Messaging.Msmq
 {
     public class TransactionResult
     {

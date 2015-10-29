@@ -1,6 +1,5 @@
 using System;
 using System.Messaging;
-using PoC;
 
 namespace yesmarket.Messaging.Msmq.Extensions
 {
