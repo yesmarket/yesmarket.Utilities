@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\Extensions.Exception.cs" />
     <Compile Include="Extensions\Extensions.Message.cs" />
     <Compile Include="Extensions\Extensions.MessageQueue.cs" />
     <Compile Include="Extensions\Extensions.Object.cs" />
