@@ -7,29 +7,7 @@ namespace yesmarket.Messaging.Msmq.Extensions
     {
         public static bool IsEmpty(this MessageQueue value)
         {
-            using (var enumerator = value.GetMessageEnumerator2())
-            {
-                return !enumerator.MoveNext();
-            }
-
-            //try
-            //{
-            //    value.Peek(timeSpan);
-            //    return false;
-            //}
-            //catch (Exception)
-            //{
-            //    //do-nothing
-            //}
-            //return true;
-        }
-
-        private static Message Peek2(this MessageQueue value)
-        {
-            using (var enumerator = value.GetMessageEnumerator2())
-            {
-                return enumerator.MoveNext() ? enumerator.Current : null;
-            }
+            return value.GetAllMessages().Length == 0;
         }
 
         public static TransactionResult InAutoTransaction(this MessageQueue value, Action<MessageQueue, MessageQueueTransaction> action)
