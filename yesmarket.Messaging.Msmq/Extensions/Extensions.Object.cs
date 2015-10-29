@@ -7,7 +7,7 @@ namespace yesmarket.Messaging.Msmq.Extensions
 {
     public static class ObjectExtensions
     {
-        public static Message ToJson<T>(this T value)
+        public static Message ToJsonMessage<T>(this T value)
         {
             var message = new Message();
             var serializedMessage = JsonConvert.SerializeObject(value);

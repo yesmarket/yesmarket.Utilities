@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>yesmarket.Messaging.Msmq</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <authors>Ryan Bartsch</authors>
     <owners>yesmarket</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,5 +12,9 @@
         <dependency id="Newtonsoft.Json" version="7.0.1" />
       </group>
     </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Messaging" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Transactions" targetFramework="net45" />
+    </frameworkAssemblies>
   </metadata>
 </package>
