@@ -57,5 +57,26 @@ namespace yesmarket.Messaging.Msmq.Extensions
             }
             return result;
         }
+
+        public static void WhileNotEmpty(this MessageQueue value, Action<MessageQueue> action)
+        {
+            while (true)
+            {
+                var length = value.GetAllMessages().Length;
+                if (length == 0) break;
+
+                for (var i = 0; i < length; i++)
+                {
+                    try
+                    {
+                        action.Invoke(value);
+                    }
+                    catch (MessageQueueException ex)
+                    {
+                        if (ex.MessageQueueErrorCode == MessageQueueErrorCode.IOTimeout) break;
+                    }
+                }
+            }
+        }
     }
 }
