@@ -10,7 +10,8 @@ namespace yesmarket.Messaging.Msmq.Extensions
             return value.GetAllMessages().Length == 0;
         }
 
-        public static TransactionResult InAutoTransaction(this MessageQueue value, Action<MessageQueue, MessageQueueTransaction> action)
+        public static TransactionResult InAutoTransaction(this MessageQueue value,
+            Action<MessageQueue, MessageQueueTransaction> handler)
         {
             var result = new TransactionResult();
             using (var transaction = new MessageQueueTransaction())
@@ -18,7 +19,7 @@ namespace yesmarket.Messaging.Msmq.Extensions
                 try
                 {
                     transaction.Begin();
-                    action.Invoke(value, transaction);
+                    handler.Invoke(value, transaction);
                     transaction.Commit();
 
                     result.Success = true;
@@ -32,6 +33,25 @@ namespace yesmarket.Messaging.Msmq.Extensions
                 }
             }
             return result;
+        }
+
+        public static void InAutoTransaction(this MessageQueue value,
+            Action<MessageQueue, MessageQueueTransaction> handler, Action<Exception> exceptionHandler)
+        {
+            using (var transaction = new MessageQueueTransaction())
+            {
+                try
+                {
+                    transaction.Begin();
+                    handler.Invoke(value, transaction);
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Abort();
+                    exceptionHandler.Invoke(ex);
+                }
+            }
         }
     }
 }
