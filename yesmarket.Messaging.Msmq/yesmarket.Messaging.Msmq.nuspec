@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>yesmarket.Messaging.Msmq</id>
+    <version>1.0.0</version>
+    <authors>Ryan Bartsch</authors>
+    <owners>yesmarket</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MSMQ extensions and helper classes</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Newtonsoft.Json" version="7.0.1" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
