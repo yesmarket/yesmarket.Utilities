@@ -60,23 +60,19 @@ namespace yesmarket.Messaging.Msmq.Extensions
 
         public static void WhileNotEmpty(this MessageQueue value, Action<MessageQueue> action)
         {
-            while (true)
+            var en = value.GetMessageEnumerator2();
+            if (!en.MoveNext()) return;
+            do
             {
-                var length = value.GetAllMessages().Length;
-                if (length == 0) break;
-
-                for (var i = 0; i < length; i++)
+                try
                 {
-                    try
-                    {
-                        action.Invoke(value);
-                    }
-                    catch (MessageQueueException ex)
-                    {
-                        if (ex.MessageQueueErrorCode == MessageQueueErrorCode.IOTimeout) break;
-                    }
+                    action.Invoke(value);
                 }
-            }
+                catch (MessageQueueException ex)
+                {
+                    if (ex.MessageQueueErrorCode == MessageQueueErrorCode.IOTimeout) break;
+                }
+            } while (en.MoveNext());
         }
     }
 }
