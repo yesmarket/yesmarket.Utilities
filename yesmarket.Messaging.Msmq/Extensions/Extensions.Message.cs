@@ -1,17 +1,12 @@
-using System.IO;
 using System.Messaging;
-using Newtonsoft.Json;
 
 namespace yesmarket.Messaging.Msmq.Extensions
 {
     public static class MessageExtensions
     {
-        public static T FromJsonMessageOf<T>(this Message value)
+        public static T ReadFromJson<T>(this Message value)
         {
-            var reader = new StreamReader(value.BodyStream);
-            var serializedMessage = reader.ReadToEnd();
-            var obj = JsonConvert.DeserializeObject<T>(serializedMessage);
-            return obj;
+            return value.BodyStream.ReadFromJson<T>();
         }
     }
 }

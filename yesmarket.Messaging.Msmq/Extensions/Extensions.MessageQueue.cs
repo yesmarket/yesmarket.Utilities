@@ -70,7 +70,9 @@ namespace yesmarket.Messaging.Msmq.Extensions
                 }
                 catch (MessageQueueException ex)
                 {
-                    if (ex.MessageQueueErrorCode == MessageQueueErrorCode.IOTimeout) break;
+                    // This handles a rare scenario whereby another process receives the last message off the Q before this instance. 
+                    // This will cause a timeout exception, so this exception handler is basically a fail safe.
+                    if (!en.MoveNext() && ex.MessageQueueErrorCode == MessageQueueErrorCode.IOTimeout) break;
                 }
             } while (en.MoveNext());
         }
