@@ -40,7 +40,7 @@ namespace yesmarket.Messaging.Msmq.Extensions
             Action<IMessageQueue> handler)
         {
             var result = new TransactionResult();
-            using (var transaction = new TransactionScope())
+            using (var transaction = new TransactionScope(TransactionScopeOption.Required))
             {
                 try
                 {
