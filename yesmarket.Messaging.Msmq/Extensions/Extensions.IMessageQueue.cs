@@ -6,13 +6,13 @@ namespace yesmarket.Messaging.Msmq.Extensions
 {
     public static class MessageQueueExtensions
     {
-        public static bool IsEmpty(this MessageQueue value)
+        public static bool IsEmpty(this IMessageQueue value)
         {
             return value.GetAllMessages().Length == 0;
         }
 
-        public static TransactionResult InMessageQueueTransaction(this MessageQueue value,
-            Action<MessageQueue, MessageQueueTransaction> handler)
+        public static TransactionResult InMessageQueueTransaction(this IMessageQueue value,
+            Action<IMessageQueue, MessageQueueTransaction> handler)
         {
             var result = new TransactionResult();
             using (var transaction = new MessageQueueTransaction())
@@ -36,8 +36,8 @@ namespace yesmarket.Messaging.Msmq.Extensions
             return result;
         }
 
-        public static TransactionResult InTransaction(this MessageQueue value,
-            Action<MessageQueue> handler)
+        public static TransactionResult InTransaction(this IMessageQueue value,
+            Action<IMessageQueue> handler)
         {
             var result = new TransactionResult();
             using (var transaction = new TransactionScope())
@@ -58,7 +58,7 @@ namespace yesmarket.Messaging.Msmq.Extensions
             return result;
         }
 
-        public static void WhileNotEmpty(this MessageQueue value, Action<MessageQueue> action)
+        public static void WhileNotEmpty(this IMessageQueue value, Action<IMessageQueue> action)
         {
             var en = value.GetMessageEnumerator2();
             if (!en.MoveNext()) return;

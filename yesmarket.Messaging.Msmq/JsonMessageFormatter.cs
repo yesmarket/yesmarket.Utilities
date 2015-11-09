@@ -16,8 +16,11 @@ namespace yesmarket.Messaging.Msmq
 
         private readonly JsonSerializerSettings _serializerSettings;
 
-        public JsonMessageFormatter(Encoding encoding = null)
-            : this(encoding, null)
+        public JsonMessageFormatter() : this(null)
+        {
+        }
+
+        public JsonMessageFormatter(Encoding encoding = null) : this(encoding, null)
         {
         }
 

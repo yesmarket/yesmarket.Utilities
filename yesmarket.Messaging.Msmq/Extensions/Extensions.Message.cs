@@ -8,5 +8,10 @@ namespace yesmarket.Messaging.Msmq.Extensions
         {
             return value.BodyStream.ReadFromJson<T>();
         }
+
+        public static T BodyAs<T>(this Message value) where T : class
+        {
+            return value != null ? value.Body as T : null;
+        }
     }
 }
