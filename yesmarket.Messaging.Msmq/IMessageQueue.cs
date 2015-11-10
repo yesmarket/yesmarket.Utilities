@@ -98,8 +98,4 @@ namespace yesmarket.Messaging.Msmq
         void SetPermissions(MessageQueueAccessControlEntry ace);
         void SetPermissions(AccessControlList dacl);
     }
-
-    public interface IMessageQueue<TFormatter> : IMessageQueue where TFormatter : IMessageFormatter
-    {
-    }
 }
