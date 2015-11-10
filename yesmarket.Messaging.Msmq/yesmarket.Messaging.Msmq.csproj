@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\TxHandlerException`1.cs" />
     <Compile Include="Extensions\Extensions.Message.cs" />
     <Compile Include="Extensions\Extensions.IMessageQueue.cs" />
     <Compile Include="Extensions\Extensions.Object.cs" />

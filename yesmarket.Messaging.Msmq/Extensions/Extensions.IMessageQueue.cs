@@ -1,6 +1,7 @@
 using System;
 using System.Messaging;
 using System.Transactions;
+using yesmarket.Messaging.Msmq.Exceptions;
 
 namespace yesmarket.Messaging.Msmq.Extensions
 {
@@ -14,7 +15,7 @@ namespace yesmarket.Messaging.Msmq.Extensions
 
         public static void InMessageQueueTransaction(this IMessageQueue value,
             Action<IMessageQueue, MessageQueueTransaction> handler,
-            Action<MessageQueueTransaction, Exception> customExceptionHandler = null)
+            Action<TxHandlerException<MessageQueueTransaction>> customExceptionHandler = null)
         {
             using (var transaction = new MessageQueueTransaction())
             {
@@ -27,19 +28,19 @@ namespace yesmarket.Messaging.Msmq.Extensions
                 catch (Exception ex)
                 {
                     if (customExceptionHandler == null)
-                        customExceptionHandler = (tx, x) =>
+                        customExceptionHandler = x =>
                         {
-                            tx.Abort();
+                            x.Transaction.Abort();
                             throw x;
                         };
 
-                    customExceptionHandler.Invoke(transaction, ex);
+                    customExceptionHandler.Invoke(new TxHandlerException<MessageQueueTransaction>(ex.Message, ex, transaction));
                 }
             }
         }
 
         public static void InTransaction(this IMessageQueue value, Action<IMessageQueue> handler,
-            Action<Exception> customExceptionHandler = null)
+            Action<TxHandlerException<TransactionScope>> customExceptionHandler = null)
         {
             using (var transaction = new TransactionScope(TransactionScopeOption.Required))
             {
@@ -51,9 +52,12 @@ namespace yesmarket.Messaging.Msmq.Extensions
                 catch (Exception ex)
                 {
                     if (customExceptionHandler == null)
-                        customExceptionHandler = x => { throw x; };
+                        customExceptionHandler = x =>
+                        {
+                            throw x;
+                        };
 
-                    customExceptionHandler.Invoke(ex);
+                    customExceptionHandler.Invoke(new TxHandlerException<TransactionScope>(ex.Message, ex, transaction));
                 }
             }
         }

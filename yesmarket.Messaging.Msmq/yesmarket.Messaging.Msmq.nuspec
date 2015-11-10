@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>yesmarket.Messaging.Msmq</id>
-    <version>4.0.0</version>
+    <version>4.0.1</version>
     <authors>Ryan Bartsch</authors>
     <owners>yesmarket</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
