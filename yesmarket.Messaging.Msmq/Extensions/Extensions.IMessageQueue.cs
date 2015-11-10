@@ -8,13 +8,14 @@ namespace yesmarket.Messaging.Msmq.Extensions
     {
         public static bool IsEmpty(this IMessageQueue value)
         {
-            return value.GetAllMessages().Length == 0;
+            var en = value.GetMessageEnumerator2();
+            return en == null || !en.MoveNext();
         }
 
-        public static TransactionResult InMessageQueueTransaction(this IMessageQueue value,
-            Action<IMessageQueue, MessageQueueTransaction> handler)
+        public static void InMessageQueueTransaction(this IMessageQueue value,
+            Action<IMessageQueue, MessageQueueTransaction> handler,
+            Action<MessageQueueTransaction, Exception> customExceptionHandler = null)
         {
-            var result = new TransactionResult();
             using (var transaction = new MessageQueueTransaction())
             {
                 try
@@ -22,40 +23,39 @@ namespace yesmarket.Messaging.Msmq.Extensions
                     transaction.Begin();
                     handler.Invoke(value, transaction);
                     transaction.Commit();
-
-                    result.Success = true;
                 }
                 catch (Exception ex)
                 {
-                    transaction.Abort();
+                    if (customExceptionHandler == null)
+                        customExceptionHandler = (tx, x) =>
+                        {
+                            tx.Abort();
+                            throw x;
+                        };
 
-                    result.Success = false;
-                    result.Ex = ex;
+                    customExceptionHandler.Invoke(transaction, ex);
                 }
             }
-            return result;
         }
 
-        public static TransactionResult InTransaction(this IMessageQueue value,
-            Action<IMessageQueue> handler)
+        public static void InTransaction(this IMessageQueue value, Action<IMessageQueue> handler,
+            Action<Exception> customExceptionHandler = null)
         {
-            var result = new TransactionResult();
             using (var transaction = new TransactionScope(TransactionScopeOption.Required))
             {
                 try
                 {
                     handler.Invoke(value);
                     transaction.Complete();
-
-                    result.Success = true;
                 }
                 catch (Exception ex)
                 {
-                    result.Success = false;
-                    result.Ex = ex;
+                    if (customExceptionHandler == null)
+                        customExceptionHandler = x => { throw x; };
+
+                    customExceptionHandler.Invoke(ex);
                 }
             }
-            return result;
         }
 
         public static void WhileNotEmpty(this IMessageQueue value, Action<IMessageQueue> action)
