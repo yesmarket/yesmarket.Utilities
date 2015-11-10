@@ -59,7 +59,7 @@
     <Compile Include="IMessageQueue.cs" />
     <Compile Include="IMessageQueue`1.cs" />
     <Compile Include="JsonMessageFormatter.cs" />
-    <Compile Include="JsonMessageQueueImpl.cs" />
+    <Compile Include="JsonMessageQueue.cs" />
     <Compile Include="MessageQueueImpl.cs" />
     <Compile Include="MessageQueueImpl`1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
