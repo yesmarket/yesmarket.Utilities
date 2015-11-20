@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.NHibernate", "yesmarket.NHibernate\yesmarket.NHibernate.csproj", "{EA1FAD24-9363-4212-AB9E-8D8ECC58AED7}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Messaging.Msmq", "yesmarket.Messaging.Msmq\yesmarket.Messaging.Msmq.csproj", "{712F6068-6BB5-45D1-BA33-3FF458C0673C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Messaging.Msmq.Tests", "yesmarket.Messaging.Msmq.Tests\yesmarket.Messaging.Msmq.Tests.csproj", "{E975961A-9BE1-4F74-97BE-DA3A07012ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Configuration", "yesmarket.Configuration\yesmarket.Configuration.csproj", "{CEBE576E-4498-4182-95E1-36A80A67D667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Transactions", "yesmarket.Transactions\yesmarket.Transactions.csproj", "{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{E975961A-9BE1-4F74-97BE-DA3A07012ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E975961A-9BE1-4F74-97BE-DA3A07012ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E975961A-9BE1-4F74-97BE-DA3A07012ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBE576E-4498-4182-95E1-36A80A67D667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBE576E-4498-4182-95E1-36A80A67D667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBE576E-4498-4182-95E1-36A80A67D667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBE576E-4498-4182-95E1-36A80A67D667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
