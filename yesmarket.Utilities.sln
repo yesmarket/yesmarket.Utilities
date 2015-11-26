@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Configuration", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Transactions", "yesmarket.Transactions\yesmarket.Transactions.csproj", "{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Templating.Razor", "yesmarket.Templating.Razor\yesmarket.Templating.Razor.csproj", "{6B369821-00A0-497B-887F-3466A3FC6A57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yesmarket.Templating.Razor.Tests", "yesmarket.Templating.Razor.Tests\yesmarket.Templating.Razor.Tests.csproj", "{6410906D-63D6-4B96-9BE8-CA19A8D9AABF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7C86009-D2BC-4C9B-837A-A026AA8F0C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B369821-00A0-497B-887F-3466A3FC6A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B369821-00A0-497B-887F-3466A3FC6A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B369821-00A0-497B-887F-3466A3FC6A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B369821-00A0-497B-887F-3466A3FC6A57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6410906D-63D6-4B96-9BE8-CA19A8D9AABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6410906D-63D6-4B96-9BE8-CA19A8D9AABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6410906D-63D6-4B96-9BE8-CA19A8D9AABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6410906D-63D6-4B96-9BE8-CA19A8D9AABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
