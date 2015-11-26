@@ -49,6 +49,8 @@
     <Compile Include="Extensions\Exception.Extensions.cs" />
     <Compile Include="FaultContracts\Fault.cs" />
     <Compile Include="FaultContracts\ValidationFault.cs" />
+    <Compile Include="Helpers\IServiceClientFactory.cs" />
+    <Compile Include="Helpers\ServiceClientFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
