@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>yesmarket.Templating.Razor</id>
+    <version>1.0.0</version>
+    <authors>Ryan Bartsch</authors>
+    <owners>yesmarket</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Testable template rendering dependency that uses RazorEngine under the hood</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Microsoft.AspNet.Razor" version="3.0.0" />
+        <dependency id="RazorEngine" version="3.7.4" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Web.Razor" targetFramework="net45" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
