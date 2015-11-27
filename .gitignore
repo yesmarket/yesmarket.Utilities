@@ -153,3 +153,4 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 *.orig
+.vs
